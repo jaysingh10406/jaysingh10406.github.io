@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaskaran Singh — Software Engineer</title>
+  <meta name="description" content="Jaskaran Singh — software engineer building backend, full-stack, and cloud infrastructure systems from scratch." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__brand">Jaskaran Singh</a>
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Software Engineer</p>
+      <h1>Jaskaran Singh</h1>
+      <p class="hero__tagline">
+        I build systems from scratch — CI/CD pipelines, security controls, full-stack apps —
+        and ship them fast. Currently leading engineering at an early-stage startup.
+      </p>
+      <div class="hero__links">
+        <a href="https://github.com/jaysingh10406" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:jaysingh10406@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <h2 class="section__title">About</h2>
+      <p class="section__body">
+        Software engineer who builds things from scratch and ships production code, backend to
+        frontend to infrastructure. Most recently I inherited an engineering org with no source
+        control and a vendor-controlled AWS account, and rebuilt it from the ground up: Git
+        workflow, CI/CD pipeline, and the security controls behind a SOC&nbsp;2 audit, all built
+        and run in-house. I use Claude Code for real production work — one CI/CD build a vendor
+        had quoted at roughly 600 hours took me about a week. Comfortable across Python, Node.js,
+        and React, and equally comfortable owning an AWS environment end to end.
+      </p>
+      <p class="section__body section__body--muted">
+        BA in Computer Science (Central Connecticut State University) · MBA in Product Management
+        (Louisiana State University)
+      </p>
+    </section>
+
+    <section id="experience" class="section">
+      <h2 class="section__title">Experience</h2>
+
+      <article class="role">
+        <div class="role__header">
+          <h3>Director of Software Engineering</h3>
+          <span class="role__dates">Oct 2025 – Present</span>
+        </div>
+        <p class="role__company">Future Energy Enterprises (early-stage startup) · Berkeley, CA</p>
+        <ul>
+          <li>Replaced a manual process of mounting container images directly to ECS with a full CI/CD pipeline across dev, staging, and production, building it with Claude Code in about a week on work an outside vendor had quoted at roughly 600 hours.</li>
+          <li>Inherited an engineering org with no source control and an AWS account controlled by an outside vendor; set up Git and brought the AWS account in-house under direct company control.</li>
+          <li>Ran a full codebase and infrastructure audit that surfaced outdated dependencies and misconfigurations, then fixed them and stood up observability and alerting where none had existed.</li>
+          <li>Led the engineering side of a SOC&nbsp;2 audit, building and running every required control in-house: single sign-on, SAST and dependency scanning, and continuous vulnerability remediation.</li>
+          <li>Took on roughly half of the engineering work previously done by an outside vendor, coordinating two vendor engineering teams while personally training three new hires.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role__header">
+          <h3>Tech Lead</h3>
+          <span class="role__dates">Nov 2022 – Oct 2025</span>
+        </div>
+        <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
+        <ul>
+          <li>Applied AI-assisted code analysis to reduce external dependency and bring critical vendor-owned paths in-house.</li>
+          <li>Ran the engineering operating rhythm across roughly 20 engineers on Apple's online commerce stack, turning ambiguous executive goals into shipped technical tradeoffs across speed, reliability, and cost.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role__header">
+          <h3>Developer Support Engineer Manager</h3>
+          <span class="role__dates">Apr 2021 – Nov 2022</span>
+        </div>
+        <p class="role__company">Meta – Instagram Business Support · Sunnyvale, CA</p>
+        <ul>
+          <li>Led a team of 40 engineers and managers across APAC/EMEA training programs, cutting ramp time by ~40 hours per person and lifting user satisfaction by 25% across managed surfaces.</li>
+          <li>Drove GTM strategy for Instagram Reels and WhatsApp Pay across India and South America.</li>
+        </ul>
+      </article>
+
+      <details class="earlier">
+        <summary>Earlier experience (2015–2021)</summary>
+        <ul>
+          <li><strong>2019–2021</strong> — Lead Engineer, Apple Online Store (Contract), Sunnyvale, CA — led technical delivery on a payment-flow improvement, contributing to a 15% engagement lift and delivering 10% under budget.</li>
+          <li><strong>2018–2019</strong> — Application Developer, Google via Accenture (Contract), Mountain View, CA — technical support for Google's developer and partner community on API issues.</li>
+          <li><strong>2017–2018</strong> — Quality Assurance Tester, PayPal via Intelliswift (Contract), San Jose, CA — tested REST APIs via Postman; maintained documentation.</li>
+          <li><strong>2016–2017</strong> — Senior Associate App Developer, UnitedHealth Group, Cypress, CA — unit testing and code review under Agile and Waterfall.</li>
+          <li><strong>2015</strong> — TDP Intern, Optum Technology, Hartford, CT — built the J2EE backend for a major application portal.</li>
+        </ul>
+      </details>
+    </section>
+
+    <section id="projects" class="section">
+      <h2 class="section__title">Projects</h2>
+      <p class="section__body section__body--muted">
+        A few things I've built to prove out ideas from the work above — not tutorials, working code.
+      </p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>Webhook Inspector</h3>
+          <p>
+            A live webhook debugging tool — generates a unique URL, catches anything sent to it,
+            and streams requests to the browser over WebSocket the instant they arrive. The kind
+            of tool I reach for when debugging a customer's integration.
+          </p>
+          <div class="project-card__tags">
+            <span>FastAPI</span><span>WebSocket</span><span>React</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/jaysingh10406/webhook-inspector" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>SOC&nbsp;2 Control Tracker</h3>
+          <p>
+            A dashboard for tracking SOC&nbsp;2 trust-service controls — SSO, SAST, dependency
+            scanning, vulnerability remediation — with live audit-readiness stats. A working model
+            of the exact controls I built and ran in-house.
+          </p>
+          <div class="project-card__tags">
+            <span>FastAPI</span><span>SQLAlchemy</span><span>React</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/jaysingh10406/soc2-control-tracker" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>quotebuster</h3>
+          <p>
+            A CLI that turns a plain-English infra description into a working Dockerfile, GitHub
+            Actions pipeline, and Terraform scaffold — offline by default, tailored further via
+            the Claude API. Proof, not just a claim, of building CI/CD fast with AI assistance.
+          </p>
+          <div class="project-card__tags">
+            <span>Python</span><span>Claude API</span><span>CLI</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/jaysingh10406/quotebuster" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <h3>security-cicd-templates</h3>
+          <p>
+            Reusable GitHub Actions workflows — SAST, dependency scanning, OIDC-based ECS
+            deploy — that other repos call with one line instead of hand-rolling CI from scratch.
+          </p>
+          <div class="project-card__tags">
+            <span>GitHub Actions</span><span>AWS OIDC</span><span>Trivy</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/jaysingh10406/security-cicd-templates" target="_blank" rel="noopener">Code →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2 class="section__title">Skills</h2>
+      <div class="skills">
+        <div class="skills__group">
+          <h4>Backend &amp; APIs</h4>
+          <p>Python (Django, DRF, FastAPI), Node.js, Java (Spring Boot), REST, GraphQL, gRPC, Webhooks</p>
+        </div>
+        <div class="skills__group">
+          <h4>Frontend</h4>
+          <p>React, Next.js, TypeScript, modern HTML5/CSS</p>
+        </div>
+        <div class="skills__group">
+          <h4>Cloud &amp; Infrastructure</h4>
+          <p>AWS, CI/CD pipelines, Docker, Terraform, GitHub Actions, observability and alerting</p>
+        </div>
+        <div class="skills__group">
+          <h4>AI-Assisted Engineering</h4>
+          <p>Claude Code for real production infrastructure work — completed a vendor-quoted ~600-hour CI/CD build in about a week</p>
+        </div>
+        <div class="skills__group">
+          <h4>Security &amp; Compliance</h4>
+          <p>SOC&nbsp;2 controls, single sign-on, SAST and dependency scanning, vulnerability remediation</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--contact">
+      <h2 class="section__title">Get in touch</h2>
+      <p class="section__body">
+        Open to software engineering and engineering management roles — remote or Bay Area.
+      </p>
+      <div class="hero__links">
+        <a href="mailto:jaysingh10406@gmail.com">jaysingh10406@gmail.com</a>
+        <a href="https://github.com/jaysingh10406" target="_blank" rel="noopener">github.com/jaysingh10406</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Built by Jaskaran Singh · <a href="https://github.com/jaysingh10406/portfolio" target="_blank" rel="noopener">source</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
