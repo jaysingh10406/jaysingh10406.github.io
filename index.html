@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaskaran Singh | Software Engineer</title>
-  <meta name="description" content="Jaskaran Singh builds backend, full-stack, and cloud infrastructure systems from scratch." />
+  <title>Jaskaran Singh | Engineering Leadership</title>
+  <meta name="description" content="Jaskaran Singh takes custody of systems an engineering team is accountable for but doesn't control, and hands back something the team can operate." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -13,6 +13,7 @@
     <div class="nav__inner">
       <a href="#top" class="nav__brand">Jaskaran Singh</a>
       <div class="nav__links">
+        <a href="#rebuild">Case study</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
@@ -24,30 +25,133 @@
 
   <header id="top" class="hero">
     <div class="hero__inner">
-      <p class="hero__eyebrow">Software Engineer</p>
-      <h1>Systems that make shipping repeatable.</h1>
+      <p class="hero__eyebrow">Engineering Leadership</p>
+      <h1>I bring critical systems back in-house.</h1>
       <p class="hero__tagline">
-        I help teams replace fragile delivery processes with repeatable pipelines. I build
-        security controls and production systems that teams can operate.
+        Vendor-held infrastructure. Code nobody remaining wrote. Production you can't see into.
+        I take custody of the systems a team is accountable for but doesn't actually control,
+        and hand back something they can operate without me.
       </p>
       <div class="hero__links">
+        <a href="#rebuild">Read the case study →</a>
         <a href="https://github.com/jaysingh10406" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="mailto:jaysingh10406@gmail.com">Email</a>
       </div>
     </div>
   </header>
 
   <main>
+    <section id="rebuild" class="section">
+      <h2 class="section__title">Case study — rebuilding an engineering foundation</h2>
+      <p class="section__body">
+        I joined an early-stage energy startup as Director of Software Engineering in October 2025.
+        The company had no source control. Containers were mounted onto ECS by hand. The AWS account
+        was controlled by an outside vendor, who also held roughly half the engineering work. Nobody
+        could say with confidence what was running in production or why it behaved the way it did.
+      </p>
+      <p class="section__body">
+        The order below is the part I'd want to be judged on. Each stage is a precondition for the
+        next one: you can't run root cause analysis on a system you can't see, you can't safely
+        change infrastructure without a pipeline, and you can't have a pipeline without source
+        control. Nobody handed me that sequence.
+      </p>
+
+      <ol class="sequence">
+        <li class="sequence__step">
+          <span class="sequence__num">01</span>
+          <div class="sequence__body">
+            <h3>Source control</h3>
+            <p>The organization had none. I established a Git workflow.</p>
+            <p class="sequence__unlock">Every change became reviewable, attributable, and reversible.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">02</span>
+          <div class="sequence__body">
+            <h3>Account custody</h3>
+            <p>The AWS account sat with an outside vendor. I brought it under direct company control.</p>
+            <p class="sequence__unlock">We could change our own infrastructure without asking permission.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">03</span>
+          <div class="sequence__body">
+            <h3>Audit of what we'd inherited</h3>
+            <p>Catalogued outdated dependencies and misconfigurations across the codebase and infrastructure, then remediated them.</p>
+            <p class="sequence__unlock">A known starting state instead of an assumed one.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">04</span>
+          <div class="sequence__body">
+            <h3>Delivery</h3>
+            <p>Replaced manual container mounting with a CI/CD pipeline across dev, staging, and production.</p>
+            <p class="sequence__unlock">Shipping became a repeatable process rather than a manual event.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">05</span>
+          <div class="sequence__body">
+            <h3>Security controls</h3>
+            <p>Led the engineering work for a SOC&nbsp;2 audit — single sign-on, SAST, dependency scanning, and vulnerability remediation, all built and run in-house.</p>
+            <p class="sequence__unlock">A security posture we could evidence rather than assert.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">06</span>
+          <div class="sequence__body">
+            <h3>Observability</h3>
+            <p>Instrumentation and alerting on a system that had neither.</p>
+            <p class="sequence__unlock">Root cause analysis grounded in evidence instead of recollection.</p>
+          </div>
+        </li>
+
+        <li class="sequence__step">
+          <span class="sequence__num">07</span>
+          <div class="sequence__body">
+            <h3>Removing classes of failure</h3>
+            <p>Once enough incidents had been analyzed properly, the more useful pattern showed up: the same architectural causes were surfacing as different symptoms. I changed the infrastructure to remove those classes of failure rather than keep closing the tickets they produced.</p>
+            <p class="sequence__unlock">Engineering time moved from repair toward prevention.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="callout">
+        <p class="callout__label">On the pipeline in stage four</p>
+        <p>
+          An outside vendor quoted roughly 600 hours for it. I judged that the number described the
+          vendor's position rather than the problem, and built it in about a week using Claude Code.
+          The pipeline is the receipt. The decision was declining the quote.
+        </p>
+      </div>
+
+      <p class="section__body">
+        Alongside this I absorbed roughly half the engineering work the vendor had been doing,
+        coordinated two vendor engineering teams, and trained three new hires. Eleven months from
+        an organization with no version control to one closing architectural defects it found
+        through its own telemetry.
+      </p>
+    </section>
+
     <section id="about" class="section">
       <h2 class="section__title">About</h2>
       <p class="section__body">
-        I build production code across backend, frontend, and infrastructure. I inherited an
-        engineering org with no source control and an AWS account controlled by an outside vendor.
-        I rebuilt the foundation in-house. This included Git workflow, CI/CD across dev, staging,
-        and production, plus the security controls behind a SOC&nbsp;2 audit. A vendor quoted
-        roughly 600 hours for the CI/CD build. I delivered it in about a week with Claude Code.
-        I work across Python, Node.js, React, and AWS.
+        The pattern above isn't specific to that company. At Apple I spent three years leading a team
+        accountable for commerce paths a vendor understood better than we did. At Meta I ran training
+        for 40 engineers and managers across two regions, where the knowledge that mattered lived in
+        people's heads rather than anywhere durable. Different surfaces, same problem: a team on the
+        hook for outcomes it couldn't fully control.
+      </p>
+      <p class="section__body">
+        So when I inherit a system, I look at custody before anything else — who can change this,
+        who can see it, who owns the account it runs in. Architecture and code quality reviews are
+        worth very little while the answer to those questions is "someone else." I write production
+        code across backend, frontend, and infrastructure, mostly in Python, Node.js, React, and AWS.
       </p>
       <p class="section__body section__body--muted">
         BA in Computer Science (Central Connecticut State University) · MBA in Product Management
@@ -65,11 +169,10 @@
         </div>
         <p class="role__company">Early-stage energy startup · Berkeley, CA</p>
         <ul>
-          <li>Replaced manual container image mounting on ECS with a CI/CD pipeline across dev, staging, and production. I built it with Claude Code in about a week. An outside vendor had quoted roughly 600 hours for the work.</li>
-          <li>Set up Git after inheriting an engineering org with no source control. I also brought the AWS account under direct company control.</li>
-          <li>Audited the codebase and infrastructure. I found outdated dependencies and misconfigurations, fixed them, and added observability and alerting.</li>
-          <li>Led the engineering work for a SOC&nbsp;2 audit. I built and ran the required controls in-house, including single sign-on, SAST, dependency scanning, and vulnerability remediation.</li>
-          <li>Took on roughly half of the engineering work previously done by an outside vendor. I coordinated two vendor engineering teams and trained three new hires.</li>
+          <li>Rebuilt the engineering foundation in sequence: source control, AWS account custody, dependency and configuration audit, CI/CD across three environments, SOC&nbsp;2 controls, then observability. <a href="#rebuild">Full case study above</a>.</li>
+          <li>Used the resulting telemetry to run root cause analysis, identify repeated failures sharing an architectural cause, and change the infrastructure to eliminate them.</li>
+          <li>Declined a vendor quote of roughly 600 hours for the CI/CD build and delivered it in about a week using Claude Code.</li>
+          <li>Took on roughly half the engineering work previously held by an outside vendor, coordinated two vendor engineering teams, and trained three new hires.</li>
         </ul>
       </article>
 
@@ -80,8 +183,8 @@
         </div>
         <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
         <ul>
-          <li>Used AI-assisted code analysis to reduce external dependency and bring critical vendor-owned paths in-house.</li>
-          <li>Ran the engineering operating rhythm for roughly 20 engineers on Apple's online commerce stack. I turned ambiguous executive goals into technical tradeoffs across speed, reliability, and cost.</li>
+          <li>Brought vendor-owned critical paths into internal understanding using AI-assisted code analysis, on a system my team was accountable for but had not authored.</li>
+          <li>Ran the engineering operating rhythm for roughly 20 engineers on Apple's online commerce stack, turning ambiguous executive goals into explicit tradeoffs across speed, reliability, and cost.</li>
         </ul>
       </article>
 
@@ -92,7 +195,7 @@
         </div>
         <p class="role__company">Meta, Instagram Business Support · Sunnyvale, CA</p>
         <ul>
-          <li>Led a team of 40 engineers and managers across APAC and EMEA training programs. Ramp time fell by about 40 hours per person, and user satisfaction rose by 25% across managed surfaces.</li>
+          <li>Led 40 engineers and managers across APAC and EMEA training programs — changing how people became productive, at org scale, across time zones. Ramp time fell by about 40 hours per person and satisfaction rose 25% across managed surfaces.</li>
           <li>Drove GTM strategy for Instagram Reels and WhatsApp Pay across India and South America.</li>
         </ul>
       </article>
@@ -112,21 +215,22 @@
     <section id="projects" class="section">
       <h2 class="section__title">Projects</h2>
       <p class="section__body section__body--muted">
-        These projects show how I approach delivery, reliability, security, and developer tooling.
+        Small things I built to think through problems from the work above — delivery, security
+        controls, debugging, and what vendor quotes are actually made of.
       </p>
 
       <div class="projects-grid">
         <article class="project-card">
-          <h3>Webhook Inspector</h3>
+          <h3>security-cicd-templates</h3>
           <p>
-            Generates a unique URL, captures incoming requests, and streams them to the browser
-            over WebSocket. I built it to debug customer integrations.
+            Reusable GitHub Actions workflows for SAST, dependency scanning, and OIDC-based ECS
+            deployment. Other repositories call them instead of rebuilding CI from scratch.
           </p>
           <div class="project-card__tags">
-            <span>FastAPI</span><span>WebSocket</span><span>React</span>
+            <span>GitHub Actions</span><span>AWS OIDC</span><span>Trivy</span>
           </div>
           <div class="project-card__links">
-            <a href="https://github.com/jaysingh10406/webhook-inspector" target="_blank" rel="noopener">Code →</a>
+            <a href="https://github.com/jaysingh10406/security-cicd-templates" target="_blank" rel="noopener">Code →</a>
           </div>
         </article>
 
@@ -148,7 +252,8 @@
           <h3>quotebuster</h3>
           <p>
             Turns a plain-English infrastructure description into a Dockerfile, GitHub Actions
-            pipeline, and Terraform scaffold. It runs offline by default and can use the Claude API.
+            pipeline, and Terraform scaffold. Named after the 600-hour quote. It runs offline by
+            default and can use the Claude API.
           </p>
           <div class="project-card__tags">
             <span>Python</span><span>Claude API</span><span>CLI</span>
@@ -159,16 +264,16 @@
         </article>
 
         <article class="project-card">
-          <h3>security-cicd-templates</h3>
+          <h3>Webhook Inspector</h3>
           <p>
-            Reusable GitHub Actions workflows for SAST, dependency scanning, and OIDC-based ECS
-            deployment. Other repositories can call them instead of rebuilding CI from scratch.
+            Generates a unique URL, captures incoming requests, and streams them to the browser
+            over WebSocket. I built it to debug customer integrations.
           </p>
           <div class="project-card__tags">
-            <span>GitHub Actions</span><span>AWS OIDC</span><span>Trivy</span>
+            <span>FastAPI</span><span>WebSocket</span><span>React</span>
           </div>
           <div class="project-card__links">
-            <a href="https://github.com/jaysingh10406/security-cicd-templates" target="_blank" rel="noopener">Code →</a>
+            <a href="https://github.com/jaysingh10406/webhook-inspector" target="_blank" rel="noopener">Code →</a>
           </div>
         </article>
       </div>
@@ -178,6 +283,18 @@
       <h2 class="section__title">Skills</h2>
       <div class="skills">
         <div class="skills__group">
+          <h4>Reliability &amp; Operations</h4>
+          <p>Observability and alerting, root cause analysis, incident pattern identification, architectural remediation</p>
+        </div>
+        <div class="skills__group">
+          <h4>Cloud &amp; Infrastructure</h4>
+          <p>AWS, CI/CD pipelines, Docker, Terraform, GitHub Actions, ECS</p>
+        </div>
+        <div class="skills__group">
+          <h4>Security &amp; Compliance</h4>
+          <p>SOC&nbsp;2 controls, single sign-on, SAST and dependency scanning, vulnerability remediation</p>
+        </div>
+        <div class="skills__group">
           <h4>Backend &amp; APIs</h4>
           <p>Python (Django, DRF, FastAPI), Node.js, Java (Spring Boot), REST, GraphQL, gRPC, Webhooks</p>
         </div>
@@ -186,16 +303,8 @@
           <p>React, Next.js, TypeScript, modern HTML5/CSS</p>
         </div>
         <div class="skills__group">
-          <h4>Cloud &amp; Infrastructure</h4>
-          <p>AWS, CI/CD pipelines, Docker, Terraform, GitHub Actions, observability and alerting</p>
-        </div>
-        <div class="skills__group">
           <h4>AI-Assisted Engineering</h4>
-          <p>Claude Code for production infrastructure work. Completed a vendor-quoted ~600-hour CI/CD build in about a week.</p>
-        </div>
-        <div class="skills__group">
-          <h4>Security &amp; Compliance</h4>
-          <p>SOC&nbsp;2 controls, single sign-on, SAST and dependency scanning, vulnerability remediation</p>
+          <p>Claude Code for production infrastructure, and AI-assisted code analysis to understand systems my teams inherited</p>
         </div>
       </div>
     </section>
@@ -203,7 +312,8 @@
     <section id="contact" class="section section--contact">
       <h2 class="section__title">Get in touch</h2>
       <p class="section__body">
-        Open to software engineering and engineering management roles in remote or Bay Area teams.
+        Open to engineering leadership roles — hands-on Director, Head of Engineering, or
+        engineering management — in remote or Bay Area teams.
       </p>
       <div class="hero__links">
         <a href="mailto:jaysingh10406@gmail.com">jaysingh10406@gmail.com</a>
@@ -214,7 +324,7 @@
   </main>
 
   <footer class="footer">
-    <p>Built by Jaskaran Singh · <a href="https://github.com/jaysingh10406/portfolio" target="_blank" rel="noopener">source</a></p>
+    <p>Built by Jaskaran Singh · <a href="https://github.com/jaysingh10406/jaysingh10406.github.io" target="_blank" rel="noopener">source</a></p>
   </footer>
 
   <script src="js/main.js"></script>
