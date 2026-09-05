@@ -351,6 +351,11 @@ a:hover {
   border-radius: 999px;
 }
 
+.project-card__links {
+  display: flex;
+  gap: 14px;
+}
+
 .project-card__links a {
   font-size: 13px;
   font-weight: 600;
