@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>D — Swiss Technical Publication</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="#top">JASKARAN SINGH</a>
+      <div>
+        <a href="#case">Case study</a><a href="#work">Work</a
+        ><a href="#experience">Experience</a>
+      </div>
+      <span>BERKELEY / CA</span>
+    </nav>
+    <main id="top">
+      <header class="hero">
+        <div class="index">001<br /><small>PROFILE</small></div>
+        <div>
+          <p class="overline">SOFTWARE ENGINEER / ENGINEERING LEADER</p>
+          <h1>Systems that<br />make shipping<br />repeatable.</h1>
+        </div>
+        <div class="hero-note">
+          I build systems from scratch — CI/CD pipelines, security controls,
+          full-stack apps — and ship them fast. Currently leading engineering at
+          an early-stage startup.<br /><br /><a
+            href="https://github.com/jaysingh10406"
+            >GitHub ↗</a
+          >
+        </div>
+      </header>
+      <section id="case">
+        <div class="index">
+          002<br /><small>FLAGSHIP<br />CASE</small>
+        </div>
+        <div class="case-copy">
+          <p class="overline">EARLY-STAGE ENERGY STARTUP / OCT 2025—PRESENT</p>
+          <h2>
+            Rebuilding the delivery system when the delivery system is the
+            constraint.
+          </h2>
+          <p>
+            Inherited an engineering org with no source control and a
+            vendor-controlled AWS account. Built Git workflow, CI/CD across dev,
+            staging, and production, and the security controls behind a SOC 2
+            audit.
+          </p>
+          <p class="annotation">
+            The vendor estimate was roughly 600 hours. The in-house CI/CD build
+            took about a week with Claude Code.
+          </p>
+        </div>
+        <div class="diagram">
+          <div class="diagram-title">FIG. 01 / PATH TO PRODUCTION</div>
+          <div class="path">
+            <span>COMMIT</span><b>→</b><span>TEST + SCAN</span><b>→</b
+            ><span>STAGING</span><b>→</b><span>ECS</span>
+          </div>
+          <p>
+            SSO / SAST / DEPENDENCY SCANNING / VULNERABILITY REMEDIATION /
+            ALERTING
+          </p>
+        </div>
+      </section>
+      <section id="work">
+        <div class="index">
+          003<br /><small>SELECTED<br />WORK</small>
+        </div>
+        <div class="work">
+          <article>
+            <span>01</span>
+            <h3>Webhook Inspector</h3>
+            <p>
+              Generates a unique URL, catches requests, and streams them to the
+              browser over WebSocket.
+            </p>
+            <small>FastAPI · WebSocket · React</small>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>SOC 2 Control Tracker</h3>
+            <p>
+              Tracks SSO, SAST, dependency scanning, and vulnerability
+              remediation with live audit-readiness stats.
+            </p>
+            <small>FastAPI · SQLAlchemy · React</small>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>quotebuster</h3>
+            <p>
+              Turns a plain-English infra description into a Dockerfile, GitHub
+              Actions pipeline, and Terraform scaffold.
+            </p>
+            <small>Python · Claude API · CLI</small>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>security-cicd-templates</h3>
+            <p>
+              Reusable workflows for SAST, dependency scanning, and OIDC-based
+              ECS deployment.
+            </p>
+            <small>GitHub Actions · AWS OIDC · Trivy</small>
+          </article>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="index">004<br /><small>EXPERIENCE</small></div>
+        <div class="roles">
+          <div>
+            <span>2025—NOW</span>
+            <p>
+              <b>Director of Software Engineering</b><br />Early-stage energy
+              startup
+            </p>
+          </div>
+          <div>
+            <span>2022—2025</span>
+            <p><b>Tech Lead</b><br />Apple Online Store</p>
+          </div>
+          <div>
+            <span>2021—2022</span>
+            <p><b>Developer Support Engineer Manager</b><br />Meta</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>BA COMPUTER SCIENCE · MBA PRODUCT MANAGEMENT</span
+      ><a href="mailto:jaysingh10406@gmail.com">jaysingh10406@gmail.com ↗</a>
+    </footer>
+  </body>
+</html>

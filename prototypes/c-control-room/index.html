@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>C — Production Control Room</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="brand" href="#top"><i></i> JASKARAN / ENG</a
+      ><span class="status">ENGINEERING SYSTEMS / DELIVERY · RELIABILITY · SECURITY</span>
+      <div>
+        <a href="#case">Work</a><a href="#case">Case Studies</a
+        ><a href="#approach">Approach</a><a href="#experience">Experience</a
+        ><a href="mailto:jaysingh10406@gmail.com">Contact</a>
+      </div>
+    </nav>
+    <main id="top">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ENGINEERING LEADERSHIP / PRODUCTION SYSTEMS</p>
+          <h1>I make software<br />safer to ship.</h1>
+          <p>
+            I help teams replace fragile delivery processes with repeatable
+            pipelines, stronger security controls, and production systems they
+            can operate. I build the system and the evidence behind it.
+          </p>
+          <div class="actions">
+            <a href="https://github.com/jaysingh10406">View GitHub ↗</a
+            ><a href="mailto:jaysingh10406@gmail.com">Contact</a>
+          </div>
+        </div>
+        <div class="metrics" aria-label="Engineering capabilities">
+          <a href="#pipeline"><b>01</b><span>DELIVERY<br />CI/CD · RELEASE SAFETY</span></a>
+          <a href="#approach"><b>02</b><span>RELIABILITY<br />OBSERVABILITY · ALERTING</span></a>
+          <a href="#case"><b>03</b><span>SECURITY<br />CLOUD · DEVSECOPS</span></a>
+        </div>
+      </header>
+      <section id="case">
+        <div class="section-head">
+          <span>CASE STUDY / 01</span><b>FRAGILE DELIVERY SYSTEM</b
+          ><span>EARLY-STAGE ENERGY STARTUP</span>
+        </div>
+        <div class="case-grid">
+          <div>
+            <p class="eyebrow">STARTING STATE / DELIVERY AND CONTROL</p>
+            <h2>Replaced manual ECS changes with a repeatable delivery path.</h2>
+            <p>
+              The engineering org had no source control. An outside vendor
+              controlled the AWS account. I brought the account in-house and
+              built Git workflow, CI/CD across dev, staging, and production,
+              and the security controls behind a SOC 2 audit.
+            </p>
+            <p class="signal">
+              BEFORE / AFTER
+              <strong>~600h vendor quote → ~1 week in-house</strong>
+            </p>
+          </div>
+          <div class="monitor" id="pipeline">
+            <div class="monitor-top">
+              <span>ARCHITECTURE / DELIVERY FLOW</span><span class="green">CONFIRMED SCOPE</span>
+            </div>
+            <div class="timeline">
+              <div class="complete">
+                <span>01</span><strong>COMMIT</strong><em>source control</em>
+              </div>
+              <div class="complete">
+                <span>02</span><strong>TEST / SCAN</strong><em>SAST + dependencies</em>
+              </div>
+              <div class="complete">
+                <span>03</span><strong>STAGING</strong><em>separate environment</em>
+              </div>
+              <div class="active">
+                <span>04</span><strong>ECS / PRODUCTION</strong><em>deployment target</em>
+              </div>
+            </div>
+            <div class="monitor-foot">
+              SSO <i></i> SAST <i></i> DEPENDENCY SCANNING <i></i> ALERTING
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="approach" class="approach">
+        <div class="section-head">
+          <span>ENGINEERING APPROACH / 02</span><b>WHAT CHANGED</b
+          ><span>NO FICTIONAL TELEMETRY</span>
+        </div>
+        <div class="approach-grid">
+          <div><span>PROBLEM</span><p>Manual release work and weak ownership made delivery difficult to control.</p></div>
+          <div><span>DECISION</span><p>Build the delivery system in-house across development, staging, and production.</p></div>
+          <div><span>CONTROL</span><p>Pair faster implementation with source control, security scanning, and observability.</p></div>
+        </div>
+      </section>
+      <section id="work">
+        <div class="section-head">
+          <span>DEPLOYMENTS / 04</span><b>SELECTED WORK</b
+          ><span>CODE AVAILABLE</span>
+        </div>
+        <div class="work">
+          <article>
+            <header><span>CODE / 01</span><b>↗</b></header>
+            <h3>Webhook Inspector</h3>
+            <p>
+              Live webhook debugging: unique URLs, captured requests, browser
+              streaming over WebSocket.
+            </p>
+            <small>FastAPI · WebSocket · React</small>
+          </article>
+          <article>
+            <header><span>CODE / 02</span><b>↗</b></header>
+            <h3>SOC 2 Control Tracker</h3>
+            <p>
+              Dashboard for SSO, SAST, dependency scanning, and vulnerability
+              remediation.
+            </p>
+            <small>FastAPI · SQLAlchemy · React</small>
+          </article>
+          <article>
+            <header><span>CODE / 03</span><b>↗</b></header>
+            <h3>quotebuster</h3>
+            <p>
+              Plain-English infrastructure description to Dockerfile, Actions
+              pipeline, and Terraform scaffold.
+            </p>
+            <small>Python · Claude API · CLI</small>
+          </article>
+          <article>
+            <header><span>CODE / 04</span><b>↗</b></header>
+            <h3>security-cicd-templates</h3>
+            <p>
+              Reusable Actions workflows for SAST, dependencies, and OIDC-based
+              ECS deploy.
+            </p>
+            <small>GitHub Actions · AWS OIDC · Trivy</small>
+          </article>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="section-head">
+          <span>OPERATING HISTORY</span><b>EXPERIENCE PREVIEW</b
+          ><span>2015—NOW</span>
+        </div>
+        <div class="experience">
+          <div>
+            <b>2025—NOW</b><span>Director of Software Engineering</span
+            ><small>Early-stage energy startup</small>
+          </div>
+          <div>
+            <b>2022—2025</b><span>Tech Lead</span
+            ><small>Apple Online Store</small>
+          </div>
+          <div>
+            <b>2021—2022</b><span>Developer Support Engineer Manager</span
+            ><small>Meta</small>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>BA CS / MBA Product Management</span><a href="#top">↑ TOP</a>
+    </footer>
+  </body>
+</html>

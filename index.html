@@ -3,343 +3,453 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaskaran Singh | Engineering Leadership</title>
-  <meta name="description" content="Jaskaran Singh takes custody of systems an engineering team is accountable for but doesn't control, and hands back something the team can operate." />
+  <title>Jaskaran Singh — Engineering Leadership</title>
+  <meta name="description" content="Engineering leader with ten years across Apple, Meta, and Google. Director of Software Engineering at Future Energy Enterprises. Architecture, reliability, AWS, security, and software delivery — still hands-on in production." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://jaysingh10406.github.io/" />
+
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Jaskaran Singh — Engineering Leadership" />
+  <meta property="og:description" content="Ten years across Apple, Meta, and Google. Director of Software Engineering. Architecture, reliability, AWS, security, and software delivery — still hands-on in production." />
+  <meta property="og:url" content="https://jaysingh10406.github.io/" />
+  <meta property="og:image" content="https://jaysingh10406.github.io/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Jaskaran Singh — Engineering Leadership" />
+  <meta name="twitter:description" content="Ten years across Apple, Meta, and Google. Director of Software Engineering." />
+  <meta name="twitter:image" content="https://jaysingh10406.github.io/og.png" />
+
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <nav class="nav">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <nav class="nav" aria-label="Primary">
     <div class="nav__inner">
       <a href="#top" class="nav__brand">Jaskaran Singh</a>
       <div class="nav__links">
-        <a href="#rebuild">Case study</a>
-        <a href="#about">About</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
+        <a href="#case-study">Case study</a>
+        <a href="#work">Technical work</a>
+        <a href="#depth">Skills</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </nav>
 
   <header id="top" class="hero">
-    <div class="hero__inner">
-      <p class="hero__eyebrow">Engineering Leadership</p>
-      <h1>I bring critical systems back in-house.</h1>
-      <p class="hero__tagline">
-        Vendor-held infrastructure. Code nobody remaining wrote. Production you can't see into.
-        I take custody of the systems a team is accountable for but doesn't actually control,
-        and hand back something they can operate without me.
+    <div class="wrap">
+      <p class="eyebrow">Director of Software Engineering</p>
+      <h1>Engineering leadership with production depth.</h1>
+      <p class="hero__lede">
+        Ten years across Apple, Meta, and Google, now Director of Software Engineering at Future
+        Energy Enterprises. I set technical direction and lead engineering teams. I also still
+        design architecture, run root cause analysis, and ship production systems.
       </p>
-      <div class="hero__links">
-        <a href="#rebuild">Read the case study →</a>
-        <a href="https://github.com/jaysingh10406" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:jaysingh10406@gmail.com">Email</a>
+      <div class="cta">
+        <a class="cta__primary" href="files/Jaskaran-Singh-Resume.pdf">Résumé (PDF)</a>
+        <a class="cta__link" href="#case-study">Featured case study</a>
+        <a class="cta__link" href="https://www.linkedin.com/in/jaysingh101/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="cta__link" href="https://github.com/jaysingh10406" target="_blank" rel="noopener">GitHub</a>
+        <a class="cta__link" href="mailto:jaysingh10406@gmail.com">Email</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <section id="rebuild" class="section">
-      <h2 class="section__title">Case study — rebuilding an engineering foundation</h2>
-      <p class="section__body">
-        I joined an early-stage energy startup as Director of Software Engineering in October 2025.
-        The company had no source control. Containers were mounted onto ECS by hand. The AWS account
-        was controlled by an outside vendor, who also held roughly half the engineering work. Nobody
-        could say with confidence what was running in production or why it behaved the way it did.
-      </p>
-      <p class="section__body">
-        The order below is the part I'd want to be judged on. Each stage is a precondition for the
-        next one: you can't run root cause analysis on a system you can't see, you can't safely
-        change infrastructure without a pipeline, and you can't have a pipeline without source
-        control. Nobody handed me that sequence.
-      </p>
+  <main id="main">
 
-      <ol class="sequence">
-        <li class="sequence__step">
-          <span class="sequence__num">01</span>
-          <div class="sequence__body">
-            <h3>Source control</h3>
-            <p>The organization had none. I established a Git workflow.</p>
-            <p class="sequence__unlock">Every change became reviewable, attributable, and reversible.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">02</span>
-          <div class="sequence__body">
-            <h3>Account custody</h3>
-            <p>The AWS account sat with an outside vendor. I brought it under direct company control.</p>
-            <p class="sequence__unlock">We could change our own infrastructure without asking permission.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">03</span>
-          <div class="sequence__body">
-            <h3>Audit of what we'd inherited</h3>
-            <p>Catalogued outdated dependencies and misconfigurations across the codebase and infrastructure — including credential handling that belonged in AWS SSM, and an unsafe deletion policy — then remediated them.</p>
-            <p class="sequence__unlock">A known starting state instead of an assumed one.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">04</span>
-          <div class="sequence__body">
-            <h3>Delivery</h3>
-            <p>Replaced manual container mounting with a CI/CD pipeline across dev, staging, and production. It has since carried 80+ deployments in three months, with promotion to production deliberately gated.</p>
-            <p class="sequence__unlock">Shipping became a repeatable process — and one the team actually uses.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">05</span>
-          <div class="sequence__body">
-            <h3>Security controls</h3>
-            <p>Led the engineering side of the company's first SOC&nbsp;2 certification and the controls that sustain it — single sign-on, SAST, dependency scanning, and continuous vulnerability remediation, all built and run in-house.</p>
-            <p class="sequence__unlock">A security posture we could evidence rather than assert.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">06</span>
-          <div class="sequence__body">
-            <h3>Observability</h3>
-            <p>Instrumentation and alerting on a system that had neither, then structured root cause analysis on what it surfaced.</p>
-            <p class="sequence__unlock">Failures could be investigated with evidence instead of recollection.</p>
-          </div>
-        </li>
-
-        <li class="sequence__step">
-          <span class="sequence__num">07</span>
-          <div class="sequence__body">
-            <h3>Execution is not completion</h3>
-            <p>The analysis kept arriving at one assumption buried in the application: invoking a background job was treated as evidence the work had succeeded. Errors were swallowed, workers failed silently, and underneath sat race conditions and database deadlocks. I rebuilt observability around verified completion rather than invocation, then fixed the failure modes that exposed.</p>
-            <p class="sequence__unlock">Failures started announcing themselves instead of being found later, by someone else.</p>
-          </div>
-        </li>
-        <li class="sequence__step">
-          <span class="sequence__num">08</span>
-          <div class="sequence__body">
-            <h3>Practices that outlive the rebuild</h3>
-            <p>Hiring requirements and interview rubrics, a wiki-based bootcamp and onboarding guide, documented code review standards, and release gates.</p>
-            <p class="sequence__unlock">The team can run all of the above without me.</p>
-          </div>
-        </li>
-      </ol>
-
-      <div class="callout">
-        <p class="callout__label">On the pipeline in stage four</p>
-        <p>
-          An outside vendor quoted roughly 600 hours for it. I judged that the number described the
-          vendor's position rather than the problem, and built it in about a week. Eighty-plus
-          deployments later, the pipeline is the receipt. The decision was declining the quote.
-        </p>
+    <section class="band" aria-label="Career snapshot">
+      <div class="wrap snapshot">
+        <div class="snapshot__item">
+          <h2>Operated at</h2>
+          <p>Apple · Meta · Google · PayPal · UnitedHealth</p>
+        </div>
+        <div class="snapshot__item">
+          <h2>Now</h2>
+          <p>Director of Software Engineering, Future Energy Enterprises. Ten vendor engineers across two teams, plus one direct report.</p>
+        </div>
+        <div class="snapshot__item">
+          <h2>Previously led</h2>
+          <p>~20 vendor engineers on Apple Online Store ordering and services. 40 engineers and managers across Meta training programs in APAC and EMEA.</p>
+        </div>
+        <div class="snapshot__item">
+          <h2>Works on</h2>
+          <p>Architecture · Reliability · AWS · Software delivery · Security and compliance · Engineering process</p>
+        </div>
       </div>
-
-      <p class="section__body">
-        Alongside this I absorbed roughly half the engineering work the vendor had been doing. I
-        lead ten vendor engineers across two teams plus one direct report, and I wrote the business
-        requirements and technical proposal for a prospective project worth up to $5M. Eleven months
-        from an organization with no version control to one closing architectural defects it finds
-        through its own telemetry.
-      </p>
-    </section>
-
-    <section id="about" class="section">
-      <h2 class="section__title">About</h2>
-      <p class="section__body">
-        The pattern above isn't specific to that company. At Apple I spent three years managing about
-        twenty vendor engineers on the Online Store's ordering and services path — accountable for code
-        a vendor understood better than we did. At Meta I ran training for 40 engineers and managers
-        across two regions, where the knowledge that mattered lived in people's heads rather than
-        anywhere durable. Different surfaces, same problem: a team on the hook for outcomes it
-        couldn't fully control.
-      </p>
-      <p class="section__body">
-        Leading engineers I don't formally own is the through-line — twenty vendor engineers at
-        Apple, ten today. So when I inherit a system, I look at custody before anything else — who
-        can change this, who can see it, who owns the account it runs in. Architecture and code quality reviews are
-        worth very little while the answer to those questions is "someone else." I write production
-        code across backend, frontend, and infrastructure, mostly in Python, Node.js, React, and AWS.
-      </p>
-      <p class="section__body section__body--muted">
-        BA in Computer Science (Central Connecticut State University) · MBA in Product Management
-        (Louisiana State University)
-      </p>
     </section>
 
     <section id="experience" class="section">
-      <h2 class="section__title">Experience</h2>
+      <div class="wrap">
+        <h2 class="section__title">Experience</h2>
 
-      <article class="role">
-        <div class="role__header">
-          <h3>Director of Software Engineering</h3>
-          <span class="role__dates">Oct 2025 to Present</span>
-        </div>
-        <p class="role__company">Early-stage energy startup · Berkeley, CA</p>
-        <ul>
-          <li>Rebuilt the engineering foundation in sequence: source control, AWS account custody, dependency and configuration audit, CI/CD across three environments, SOC&nbsp;2 certification, observability, then engineering practice. <a href="#rebuild">Full case study above</a>.</li>
-          <li>Traced recurring production failures to a gap between job execution and verified completion, rebuilt observability around completion, and remediated swallowed exceptions, silent worker failures, race conditions, and database deadlocks.</li>
-          <li>Declined a vendor quote of roughly 600 hours for the CI/CD build and delivered it in about a week; it has since carried 80+ deployments in three months.</li>
-          <li>Lead ten vendor engineers across two teams plus one direct report, after absorbing roughly half the engineering work previously held by an outside vendor.</li>
-          <li>Established hiring requirements and interview rubrics, a wiki bootcamp and onboarding guide, code review standards, and release gates.</li>
-        </ul>
-      </article>
+        <article class="role">
+          <div class="role__header">
+            <h3>Director of Software Engineering</h3>
+            <span class="role__dates">Oct 2025 — Present</span>
+          </div>
+          <p class="role__company">Future Energy Enterprises · Berkeley, CA</p>
+          <ul>
+            <li>Rebuilt the engineering foundation in sequence: source control, AWS account custody, dependency and configuration audit, CI/CD across three environments, SOC&nbsp;2 certification, observability, then engineering practice. <a href="#case-study">Case study below</a>.</li>
+            <li>Traced recurring production failures to a gap between job execution and verified completion. Rebuilt observability around completion and remediated swallowed exceptions, silent worker failures, race conditions, and database deadlocks.</li>
+            <li>Built automated delivery across dev, staging, and production. It has carried 80+ deployments in three months, with promotion to production deliberately gated.</li>
+            <li>Lead ten vendor engineers across two vendor teams, plus one direct report, after absorbing roughly half the engineering work previously held by an outside vendor.</li>
+            <li>Established hiring requirements and interview rubrics, a wiki bootcamp and onboarding guide, code review standards, and release gates.</li>
+            <li>Wrote the business requirements and technical proposal for a prospective project worth up to $5M.</li>
+          </ul>
+        </article>
 
-      <article class="role">
-        <div class="role__header">
-          <h3>Tech Lead</h3>
-          <span class="role__dates">Nov 2022 to Oct 2025</span>
-        </div>
-        <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
-        <ul>
-          <li>Managed roughly 20 vendor engineers delivering Apple Online Store ordering and services, running the engineering operating rhythm across squads on a revenue-carrying path.</li>
-          <li>Brought vendor-owned critical paths into internal understanding using AI-assisted code analysis, on code my team was accountable for but had not authored.</li>
-          <li>Turned ambiguous executive goals into explicit tradeoffs across speed, reliability, and cost. Worked in JavaScript and Amazon Athena.</li>
-        </ul>
-      </article>
+        <article class="role">
+          <div class="role__header">
+            <h3>Tech Lead</h3>
+            <span class="role__dates">Nov 2022 — Oct 2025</span>
+          </div>
+          <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
+          <ul>
+            <li>Managed roughly 20 vendor engineers delivering Apple Online Store ordering and services, running the engineering operating rhythm across squads on a revenue-carrying path.</li>
+            <li>Brought vendor-owned critical paths into internal understanding, on code the team was accountable for but had not authored.</li>
+            <li>Turned ambiguous executive goals into explicit tradeoffs across speed, reliability, and cost. Worked in JavaScript and Amazon Athena.</li>
+          </ul>
+        </article>
 
-      <article class="role">
-        <div class="role__header">
-          <h3>Developer Support Engineer Manager</h3>
-          <span class="role__dates">Apr 2021 to Nov 2022</span>
-        </div>
-        <p class="role__company">Meta, Instagram Business Support · Sunnyvale, CA</p>
-        <ul>
-          <li>Led 40 engineers and managers across APAC and EMEA training programs — changing how people became productive, at org scale, across time zones. Ramp time fell by about 40 hours per person and satisfaction rose 25% across managed surfaces.</li>
-          <li>Drove GTM strategy for Instagram Reels and WhatsApp Pay across India and South America.</li>
-        </ul>
-      </article>
+        <article class="role">
+          <div class="role__header">
+            <h3>Developer Support Engineer Manager</h3>
+            <span class="role__dates">Apr 2021 — Nov 2022</span>
+          </div>
+          <p class="role__company">Meta, Instagram Business Support · Sunnyvale, CA</p>
+          <ul>
+            <li>Led 40 engineers and managers across APAC and EMEA training programs. Ramp time fell by about 40 hours per person, and satisfaction rose 25% across managed surfaces.</li>
+            <li>Directed GTM strategy for Instagram Reels and WhatsApp Pay across India and South America, translating advertiser and end-user needs into product and engineering requirements.</li>
+          </ul>
+        </article>
 
-      <details class="earlier">
-        <summary>Earlier experience (2015 to 2021)</summary>
-        <ul>
-          <li><strong>2019 to 2021</strong>: Lead Engineer, Apple Online Store (Contract), Sunnyvale, CA. Led technical delivery on a payment-flow improvement that contributed to a 15% engagement lift. Delivered 10% under budget.</li>
-          <li><strong>2018 to 2019</strong>: Application Developer, Google via Accenture (Contract), Mountain View, CA. Provided technical support for Google's developer and partner community on API issues.</li>
-          <li><strong>2017 to 2018</strong>: Quality Assurance Tester, PayPal via Intelliswift (Contract), San Jose, CA. Tested REST APIs with Postman and maintained documentation.</li>
-          <li><strong>2016 to 2017</strong>: Senior Associate App Developer, UnitedHealth Group, Cypress, CA. Performed unit testing and code review under Agile and Waterfall.</li>
-          <li><strong>2015</strong>: TDP Intern, Optum Technology, Hartford, CT. Built the J2EE backend for a major application portal.</li>
-        </ul>
-      </details>
+        <article class="role">
+          <div class="role__header">
+            <h3>Lead Engineer</h3>
+            <span class="role__dates">2019 — 2021</span>
+          </div>
+          <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
+          <ul>
+            <li>Led technical delivery of an online payment-flow improvement as informal manager for the vendor engineering team, contributing to a 15% engagement lift.</li>
+            <li>Delivered the engagement 10% under budget through scope discipline and prioritization against measured outcomes.</li>
+          </ul>
+        </article>
+
+        <details class="earlier">
+          <summary>Earlier experience, 2015 to 2019</summary>
+          <ul>
+            <li><strong>2018 — 2019</strong> · Application Developer, Google via Accenture (Contract), Mountain View, CA. Supported Google's developer and partner community on API issues, resolving reported defects through direct client correspondence.</li>
+            <li><strong>2017 — 2018</strong> · Quality Assurance Tester, PayPal via Intelliswift (Contract), San Jose, CA. Tested REST APIs using Postman and maintained supporting documentation.</li>
+            <li><strong>2016 — 2017</strong> · Senior Associate App Developer, UnitedHealth Group, Cypress, CA. Unit testing and code review across applications under both Agile and Waterfall delivery.</li>
+            <li><strong>2015</strong> · TDP Intern, Optum Technology, Hartford, CT. Built the J2EE backend for a major application portal, coordinating deliverables across teams in three countries.</li>
+          </ul>
+        </details>
+
+        <p class="note">
+          BA in Computer Science, Central Connecticut State University · MBA in Product Management,
+          Louisiana State University
+        </p>
+      </div>
     </section>
 
-    <section id="projects" class="section">
-      <h2 class="section__title">Projects</h2>
-      <p class="section__body section__body--muted">
-        Small things I built to think through problems from the work above — delivery, security
-        controls, debugging, and what vendor quotes are actually made of.
-      </p>
+    <section id="case-study" class="section section--alt">
+      <div class="wrap">
+        <p class="eyebrow">Featured case study</p>
+        <h2 class="section__title">Rebuilding an engineering foundation</h2>
 
-      <div class="projects-grid">
-        <article class="project-card">
-          <h3>security-cicd-templates</h3>
-          <p>
-            Reusable GitHub Actions workflows for SAST, dependency scanning, and OIDC-based ECS
-            deployment. Other repositories call them instead of rebuilding CI from scratch.
+        <p class="lede">
+          I joined Future Energy Enterprises as Director of Software Engineering in October 2025.
+          The company had no source control. Containers were mounted onto ECS by hand. The AWS
+          account was controlled by an outside vendor, who also held roughly half the engineering
+          work. Nobody could say with confidence what was running in production, or why it behaved
+          the way it did.
+        </p>
+        <p>
+          When I inherit a system I look at custody first — who can change this, who can see it, who
+          owns the account it runs in. Architecture review is worth very little while the answer is
+          "someone else." Eleven months later the organization runs on infrastructure it controls,
+          a release process it can repeat, and telemetry that tells it the truth.
+        </p>
+
+        <h3 class="sub">What changed</h3>
+        <div class="diagram" role="img" aria-label="Before and after state. Before: no source control, manual container deploys, vendor-held AWS account, no useful telemetry, invocation counted as success. After: Git workflow with reviewed changes, repeatable gated releases, company-controlled infrastructure, completion-aware monitoring, documented engineering practice.">
+          <div class="diagram__col diagram__col--before">
+            <p class="diagram__label">Before</p>
+            <ul>
+              <li>No source control</li>
+              <li>Manual container deploys</li>
+              <li>Vendor-held AWS account</li>
+              <li>No useful telemetry</li>
+              <li>Invocation counted as success</li>
+            </ul>
+          </div>
+          <div class="diagram__arrow" aria-hidden="true">&#8594;</div>
+          <div class="diagram__col diagram__col--after">
+            <p class="diagram__label">After</p>
+            <ul>
+              <li>Git workflow, reviewed changes</li>
+              <li>Repeatable gated releases</li>
+              <li>Company-controlled infrastructure</li>
+              <li>Completion-aware monitoring</li>
+              <li>Documented engineering practice</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub">Executive summary</h3>
+        <dl class="themes">
+          <dt>Custody and engineering control</dt>
+          <dd>Established a Git workflow where none existed and brought the AWS account under direct company control. Audited the inherited codebase and infrastructure, including credential handling that belonged in AWS SSM and an unsafe deletion policy, and remediated both.</dd>
+
+          <dt>Repeatable software delivery</dt>
+          <dd>Replaced manual container mounting with automated delivery across dev, staging, and production. It has since carried 80+ deployments in three months, with promotion to production deliberately gated.</dd>
+
+          <dt>Security and compliance</dt>
+          <dd>Led the engineering side of the company's first SOC&nbsp;2 certification and the controls that sustain it: single sign-on, SAST, dependency scanning, and continuous vulnerability remediation.</dd>
+
+          <dt>Reliability and observability</dt>
+          <dd>Instrumented a system that had no telemetry, then found that the application was measuring the wrong thing entirely. Detailed below.</dd>
+
+          <dt>Practices that persist</dt>
+          <dd>Hiring requirements and interview rubrics, a wiki bootcamp and onboarding guide, code review standards, and release gates. The team runs all of it without me.</dd>
+        </dl>
+
+        <h3 class="sub">Execution is not completion</h3>
+        <p>
+          The analysis kept arriving at one assumption buried in the application: invoking a
+          background job was treated as evidence the work had succeeded. The success signal stopped
+          two steps too early.
+        </p>
+
+        <div class="chain" role="img" aria-label="Four-step chain: job invoked, worker started, business operation, verified completion. The old system reported success after the first two steps, so everything after that could fail without producing a signal.">
+          <ol class="chain__steps">
+            <li class="chain__step chain__step--old"><span class="chain__n">1</span> Job invoked</li>
+            <li class="chain__step chain__step--old"><span class="chain__n">2</span> Worker started</li>
+            <li class="chain__step"><span class="chain__n">3</span> Business operation</li>
+            <li class="chain__step"><span class="chain__n">4</span> Verified completion</li>
+          </ol>
+          <p class="chain__caption">
+            <span class="chain__key" aria-hidden="true"></span> The old success signal stopped after
+            step 2. Everything past it could fail without producing a signal.
           </p>
-          <div class="project-card__tags">
-            <span>GitHub Actions</span><span>AWS OIDC</span><span>Trivy</span>
-          </div>
-          <div class="project-card__links">
-            <a href="https://github.com/jaysingh10406/security-cicd-templates" target="_blank" rel="noopener">Code →</a>
-          </div>
-        </article>
+        </div>
 
-        <article class="project-card">
-          <h3>SOC&nbsp;2 Control Tracker</h3>
-          <p>
-            Tracks SSO, SAST, dependency scanning, and vulnerability remediation with audit
-            readiness statistics. It models the controls I built and ran in-house.
+        <p>
+          Errors were swallowed. Workers failed silently. Underneath sat race conditions and
+          database deadlocks. I rebuilt observability around verified completion rather than
+          invocation, then fixed the failure modes that exposed. Failures started announcing
+          themselves instead of being found later, by someone else.
+        </p>
+
+        <details class="deepdive">
+          <summary>Read the full sequence, eight stages</summary>
+
+          <p class="deepdive__intro">
+            The order is the part I would want to be judged on. Each stage is a precondition for the
+            next: you cannot run root cause analysis on a system you cannot see, you cannot safely
+            change infrastructure without a pipeline, and you cannot have a pipeline without source
+            control. Nobody handed me that sequence.
           </p>
-          <div class="project-card__tags">
-            <span>FastAPI</span><span>SQLAlchemy</span><span>React</span>
-          </div>
-          <div class="project-card__links">
-            <a href="https://jaysingh10406.github.io/soc2-control-tracker/" target="_blank" rel="noopener">Live demo →</a>
-            <a href="https://github.com/jaysingh10406/soc2-control-tracker" target="_blank" rel="noopener">Code →</a>
-          </div>
-        </article>
 
-        <article class="project-card">
-          <h3>quotebuster</h3>
+          <ol class="sequence">
+            <li class="sequence__step">
+              <span class="sequence__num">01</span>
+              <div class="sequence__body">
+                <h4>Source control</h4>
+                <p>The organization had none. I established a Git workflow.</p>
+                <p class="sequence__unlock">Every change became reviewable, attributable, and reversible.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">02</span>
+              <div class="sequence__body">
+                <h4>Account custody</h4>
+                <p>The AWS account sat with an outside vendor. I brought it under direct company control.</p>
+                <p class="sequence__unlock">We could change our own infrastructure without asking permission.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">03</span>
+              <div class="sequence__body">
+                <h4>Audit of what we had inherited</h4>
+                <p>Catalogued outdated dependencies and misconfigurations across the codebase and infrastructure, including credential handling that belonged in AWS SSM and an unsafe deletion policy, then remediated them.</p>
+                <p class="sequence__unlock">A known starting state instead of an assumed one.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">04</span>
+              <div class="sequence__body">
+                <h4>Delivery</h4>
+                <p>Replaced manual container mounting with a CI/CD pipeline across dev, staging, and production. An outside vendor had quoted roughly 600 hours for the work; I judged that the number described the vendor's position rather than the problem, and built it in about a week.</p>
+                <p class="sequence__unlock">80+ deployments in three months. The pipeline is used, not just built.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">05</span>
+              <div class="sequence__body">
+                <h4>Security controls</h4>
+                <p>Led the engineering side of the company's first SOC&nbsp;2 certification and the controls that sustain it: single sign-on, SAST, dependency scanning, and continuous vulnerability remediation, all built and run in-house.</p>
+                <p class="sequence__unlock">A security posture we could evidence rather than assert.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">06</span>
+              <div class="sequence__body">
+                <h4>Observability</h4>
+                <p>Instrumentation and alerting on a system that had neither, then structured root cause analysis on what it surfaced.</p>
+                <p class="sequence__unlock">Failures could be investigated with evidence instead of recollection.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">07</span>
+              <div class="sequence__body">
+                <h4>Execution is not completion</h4>
+                <p>Invoking a background job was treated as evidence the work had succeeded. Errors were swallowed, workers failed silently, and underneath sat race conditions and database deadlocks. I rebuilt observability around verified completion rather than invocation, then fixed the failure modes that exposed.</p>
+                <p class="sequence__unlock">Failures started announcing themselves instead of being found later, by someone else.</p>
+              </div>
+            </li>
+            <li class="sequence__step">
+              <span class="sequence__num">08</span>
+              <div class="sequence__body">
+                <h4>Practices that outlive the rebuild</h4>
+                <p>Hiring requirements and interview rubrics, a wiki-based bootcamp and onboarding guide, documented code review standards, and release gates.</p>
+                <p class="sequence__unlock">The team can run all of the above without me.</p>
+              </div>
+            </li>
+          </ol>
+
           <p>
-            Turns a plain-English infrastructure description into a Dockerfile, GitHub Actions
-            pipeline, and Terraform scaffold. Named after the 600-hour quote. It runs offline by
-            default and can use the Claude API.
+            Alongside this I absorbed roughly half the engineering work the vendor had been doing. I
+            lead ten vendor engineers across two teams plus one direct report, and I wrote the
+            business requirements and technical proposal for a prospective project worth up to $5M.
           </p>
-          <div class="project-card__tags">
-            <span>Python</span><span>Claude API</span><span>CLI</span>
-          </div>
-          <div class="project-card__links">
-            <a href="https://github.com/jaysingh10406/quotebuster" target="_blank" rel="noopener">Code →</a>
-          </div>
-        </article>
+        </details>
+      </div>
+    </section>
 
-        <article class="project-card">
+    <section id="work" class="section">
+      <div class="wrap">
+        <h2 class="section__title">Selected technical work</h2>
+        <p class="note">
+          Small systems, built to reason through problems from the work above. The engineering
+          decisions matter more than the stacks.
+        </p>
+
+        <article class="work">
           <h3>Webhook Inspector</h3>
+          <p class="work__sub">FastAPI · WebSocket · React · asyncio</p>
           <p>
-            Generates a unique URL, captures incoming requests, and streams them to the browser
-            over WebSocket. I built it to debug customer integrations.
+            Generates a unique URL, captures any HTTP request sent to it, and streams it to the
+            browser as it lands. Built for the job I actually reach for it on: debugging a
+            customer's webhook integration when the payload is not what either side expected.
           </p>
-          <div class="project-card__tags">
-            <span>FastAPI</span><span>WebSocket</span><span>React</span>
-          </div>
-          <div class="project-card__links">
-            <a href="https://jaysingh10406.github.io/webhook-inspector/" target="_blank" rel="noopener">Live demo →</a>
-            <a href="https://github.com/jaysingh10406/webhook-inspector" target="_blank" rel="noopener">Code →</a>
-          </div>
+          <p>
+            The design decision worth defending is the storage. Captured requests live in a bounded
+            in-memory <code>deque</code> capped per bin, and there is no database. Debugging traffic
+            is ephemeral by nature, so durability would have bought nothing and cost a schema, a
+            migration path, and an operational dependency. The bound matters more than the
+            persistence: without a cap, one noisy integration exhausts memory.
+          </p>
+          <p>
+            That choice has a clear expiry. Live push uses per-subscriber
+            <code>asyncio.Queue</code> fan-out inside a single process, so the moment this runs on
+            more than one worker, a request captured by one process will not reach a browser
+            connected to another. That is where Redis pub/sub earns its place, and not before.
+          </p>
+          <p class="work__links">
+            <a href="https://jaysingh10406.github.io/webhook-inspector/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/jaysingh10406/webhook-inspector" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="work">
+          <h3>security-cicd-templates</h3>
+          <p class="work__sub">GitHub Actions · AWS OIDC · Trivy · Bandit</p>
+          <p>
+            Reusable <code>workflow_call</code> workflows for the pipeline shape I have now built
+            twice: static analysis, dependency scanning, build, deploy. A consuming repository
+            references them with a single <code>uses:</code> line instead of hand-rolling CI again.
+          </p>
+          <p>
+            Deployment authenticates to AWS through OIDC rather than long-lived access keys held in
+            GitHub secrets. That removes a standing credential from every repository that deploys,
+            which is the difference between a secret that can leak and a token that expires on its
+            own. Dependency scanning uploads SARIF to GitHub code scanning so findings land where
+            engineers already work rather than in a report nobody opens.
+          </p>
+          <p class="work__links">
+            <a href="https://github.com/jaysingh10406/security-cicd-templates" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="work work--compact">
+          <h3>SOC 2 Control Tracker</h3>
+          <p class="work__sub">FastAPI · SQLAlchemy · React</p>
+          <p>
+            Tracks trust-service control status, ownership, and audit readiness. It models the
+            controls I built and ran in-house during the SOC&nbsp;2 certification above, because a
+            spreadsheet was the wrong tool for something an auditor would eventually read.
+          </p>
+          <p class="work__links">
+            <a href="https://jaysingh10406.github.io/soc2-control-tracker/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/jaysingh10406/soc2-control-tracker" target="_blank" rel="noopener">Source</a>
+          </p>
         </article>
       </div>
     </section>
 
-    <section id="skills" class="section">
-      <h2 class="section__title">Skills</h2>
-      <div class="skills">
-        <div class="skills__group">
-          <h4>Reliability &amp; Operations</h4>
-          <p>Observability and alerting, root cause analysis, incident pattern identification, architectural remediation</p>
-        </div>
-        <div class="skills__group">
-          <h4>Cloud &amp; Infrastructure</h4>
-          <p>AWS, CI/CD pipelines, Docker, Terraform, GitHub Actions, ECS</p>
-        </div>
-        <div class="skills__group">
-          <h4>Security &amp; Compliance</h4>
-          <p>SOC&nbsp;2 controls, single sign-on, SAST and dependency scanning, vulnerability remediation</p>
-        </div>
-        <div class="skills__group">
-          <h4>Backend &amp; APIs</h4>
-          <p>Python (Django, DRF, FastAPI), Node.js, Java (Spring Boot), REST, GraphQL, gRPC, Webhooks</p>
-        </div>
-        <div class="skills__group">
-          <h4>Frontend</h4>
-          <p>React, Next.js, TypeScript, modern HTML5/CSS</p>
-        </div>
-        <div class="skills__group">
-          <h4>AI-Assisted Engineering</h4>
-          <p>Claude Code for production infrastructure, and AI-assisted code analysis to understand systems my teams inherited</p>
-        </div>
+    <section id="depth" class="section section--alt">
+      <div class="wrap">
+        <h2 class="section__title">Technical depth</h2>
+        <dl class="depth">
+          <dt>Engineering leadership &amp; architecture</dt>
+          <dd>Technical strategy, architecture assessment, vendor engineering team leadership, hiring requirements and interview rubrics, onboarding design, code review standards, release gates, executive communication, business requirements</dd>
+
+          <dt>Cloud &amp; platform</dt>
+          <dd>AWS (ECS, IAM, SSM, OIDC), Docker, Terraform, GitHub Actions, CI/CD, multi-environment release management</dd>
+
+          <dt>Reliability &amp; production engineering</dt>
+          <dd>Completion-aware observability, root cause analysis, failure-mode remediation, concurrency defects (race conditions, deadlocks), background job and worker reliability, production validation</dd>
+
+          <dt>Security &amp; compliance</dt>
+          <dd>SOC 2 certification, single sign-on, SAST, dependency scanning, vulnerability remediation, secrets management</dd>
+
+          <dt>Backend &amp; asynchronous systems</dt>
+          <dd>REST, GraphQL, gRPC, WebSockets, API design, background job and worker architecture, concurrency, asynchronous processing</dd>
+
+          <dt>Languages &amp; frameworks</dt>
+          <dd>Python (Django, DRF, FastAPI), TypeScript, JavaScript (React, Next.js, Node.js), Java (Spring Boot), SQL</dd>
+        </dl>
+        <p class="note">
+          Methodology: I use AI-assisted analysis to get oriented in inherited codebases quickly.
+          The architecture, validation, and production outcomes are mine.
+        </p>
       </div>
     </section>
 
-    <section id="contact" class="section section--contact">
-      <h2 class="section__title">Get in touch</h2>
-      <p class="section__body">
-        Open to engineering leadership roles — hands-on Director, Head of Engineering, or
-        engineering management — in remote or Bay Area teams.
-      </p>
-      <div class="hero__links">
-        <a href="mailto:jaysingh10406@gmail.com">jaysingh10406@gmail.com</a>
-        <a href="https://github.com/jaysingh10406" target="_blank" rel="noopener">github.com/jaysingh10406</a>
-        <a href="https://www.linkedin.com/in/jaysingh101/" target="_blank" rel="noopener">linkedin.com/in/jaysingh101</a>
+    <section id="contact" class="section">
+      <div class="wrap">
+        <h2 class="section__title">Contact</h2>
+        <p class="lede">
+          Open to engineering leadership roles, Director through Senior Engineering Manager, and to
+          Principal or Staff+ roles where the work is architecture, reliability, and production
+          ownership. Remote or Bay Area.
+        </p>
+        <div class="cta">
+          <a class="cta__primary" href="mailto:jaysingh10406@gmail.com">jaysingh10406@gmail.com</a>
+          <a class="cta__link" href="files/Jaskaran-Singh-Resume.pdf">Résumé (PDF)</a>
+          <a class="cta__link" href="https://www.linkedin.com/in/jaysingh101/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="cta__link" href="https://github.com/jaysingh10406" target="_blank" rel="noopener">GitHub</a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>Built by Jaskaran Singh · <a href="https://github.com/jaysingh10406/jaysingh10406.github.io" target="_blank" rel="noopener">source</a></p>
+    <div class="wrap">
+      <p>Jaskaran Singh · <a href="https://github.com/jaysingh10406/jaysingh10406.github.io" target="_blank" rel="noopener">Source</a></p>
+    </div>
   </footer>
 
   <script src="js/main.js"></script>
