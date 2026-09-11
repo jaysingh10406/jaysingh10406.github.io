@@ -79,7 +79,7 @@
           <span class="sequence__num">03</span>
           <div class="sequence__body">
             <h3>Audit of what we'd inherited</h3>
-            <p>Catalogued outdated dependencies and misconfigurations across the codebase and infrastructure, then remediated them.</p>
+            <p>Catalogued outdated dependencies and misconfigurations across the codebase and infrastructure — including credential handling that belonged in AWS SSM, and an unsafe deletion policy — then remediated them.</p>
             <p class="sequence__unlock">A known starting state instead of an assumed one.</p>
           </div>
         </li>
@@ -88,8 +88,8 @@
           <span class="sequence__num">04</span>
           <div class="sequence__body">
             <h3>Delivery</h3>
-            <p>Replaced manual container mounting with a CI/CD pipeline across dev, staging, and production.</p>
-            <p class="sequence__unlock">Shipping became a repeatable process rather than a manual event.</p>
+            <p>Replaced manual container mounting with a CI/CD pipeline across dev, staging, and production. It has since carried 80+ deployments in three months, with promotion to production deliberately gated.</p>
+            <p class="sequence__unlock">Shipping became a repeatable process — and one the team actually uses.</p>
           </div>
         </li>
 
@@ -97,7 +97,7 @@
           <span class="sequence__num">05</span>
           <div class="sequence__body">
             <h3>Security controls</h3>
-            <p>Led the engineering work for a SOC&nbsp;2 audit — single sign-on, SAST, dependency scanning, and vulnerability remediation, all built and run in-house.</p>
+            <p>Led the engineering side of the company's first SOC&nbsp;2 certification and the controls that sustain it — single sign-on, SAST, dependency scanning, and continuous vulnerability remediation, all built and run in-house.</p>
             <p class="sequence__unlock">A security posture we could evidence rather than assert.</p>
           </div>
         </li>
@@ -106,17 +106,25 @@
           <span class="sequence__num">06</span>
           <div class="sequence__body">
             <h3>Observability</h3>
-            <p>Instrumentation and alerting on a system that had neither.</p>
-            <p class="sequence__unlock">Root cause analysis grounded in evidence instead of recollection.</p>
+            <p>Instrumentation and alerting on a system that had neither, then structured root cause analysis on what it surfaced.</p>
+            <p class="sequence__unlock">Failures could be investigated with evidence instead of recollection.</p>
           </div>
         </li>
 
         <li class="sequence__step">
           <span class="sequence__num">07</span>
           <div class="sequence__body">
-            <h3>Removing classes of failure</h3>
-            <p>Once enough incidents had been analyzed properly, the more useful pattern showed up: the same architectural causes were surfacing as different symptoms. I changed the infrastructure to remove those classes of failure rather than keep closing the tickets they produced.</p>
-            <p class="sequence__unlock">Engineering time moved from repair toward prevention.</p>
+            <h3>Execution is not completion</h3>
+            <p>The analysis kept arriving at one assumption buried in the application: invoking a background job was treated as evidence the work had succeeded. Errors were swallowed, workers failed silently, and underneath sat race conditions and database deadlocks. I rebuilt observability around verified completion rather than invocation, then fixed the failure modes that exposed.</p>
+            <p class="sequence__unlock">Failures started announcing themselves instead of being found later, by someone else.</p>
+          </div>
+        </li>
+        <li class="sequence__step">
+          <span class="sequence__num">08</span>
+          <div class="sequence__body">
+            <h3>Practices that outlive the rebuild</h3>
+            <p>Hiring requirements and interview rubrics, a wiki-based bootcamp and onboarding guide, documented code review standards, and release gates.</p>
+            <p class="sequence__unlock">The team can run all of the above without me.</p>
           </div>
         </li>
       </ol>
@@ -125,15 +133,16 @@
         <p class="callout__label">On the pipeline in stage four</p>
         <p>
           An outside vendor quoted roughly 600 hours for it. I judged that the number described the
-          vendor's position rather than the problem, and built it in about a week using Claude Code.
-          The pipeline is the receipt. The decision was declining the quote.
+          vendor's position rather than the problem, and built it in about a week. Eighty-plus
+          deployments later, the pipeline is the receipt. The decision was declining the quote.
         </p>
       </div>
 
       <p class="section__body">
-        Alongside this I absorbed roughly half the engineering work the vendor had been doing,
-        coordinated two vendor engineering teams, and trained three new hires. Eleven months from
-        an organization with no version control to one closing architectural defects it found
+        Alongside this I absorbed roughly half the engineering work the vendor had been doing. I
+        lead ten vendor engineers across two teams plus one direct report, and I wrote the business
+        requirements and technical proposal for a prospective project worth up to $5M. Eleven months
+        from an organization with no version control to one closing architectural defects it finds
         through its own telemetry.
       </p>
     </section>
@@ -141,15 +150,17 @@
     <section id="about" class="section">
       <h2 class="section__title">About</h2>
       <p class="section__body">
-        The pattern above isn't specific to that company. At Apple I spent three years leading a team
-        accountable for commerce paths a vendor understood better than we did. At Meta I ran training
-        for 40 engineers and managers across two regions, where the knowledge that mattered lived in
-        people's heads rather than anywhere durable. Different surfaces, same problem: a team on the
-        hook for outcomes it couldn't fully control.
+        The pattern above isn't specific to that company. At Apple I spent three years managing about
+        twenty vendor engineers on the Online Store's ordering and services path — accountable for code
+        a vendor understood better than we did. At Meta I ran training for 40 engineers and managers
+        across two regions, where the knowledge that mattered lived in people's heads rather than
+        anywhere durable. Different surfaces, same problem: a team on the hook for outcomes it
+        couldn't fully control.
       </p>
       <p class="section__body">
-        So when I inherit a system, I look at custody before anything else — who can change this,
-        who can see it, who owns the account it runs in. Architecture and code quality reviews are
+        Leading engineers I don't formally own is the through-line — twenty vendor engineers at
+        Apple, ten today. So when I inherit a system, I look at custody before anything else — who
+        can change this, who can see it, who owns the account it runs in. Architecture and code quality reviews are
         worth very little while the answer to those questions is "someone else." I write production
         code across backend, frontend, and infrastructure, mostly in Python, Node.js, React, and AWS.
       </p>
@@ -169,10 +180,11 @@
         </div>
         <p class="role__company">Early-stage energy startup · Berkeley, CA</p>
         <ul>
-          <li>Rebuilt the engineering foundation in sequence: source control, AWS account custody, dependency and configuration audit, CI/CD across three environments, SOC&nbsp;2 controls, then observability. <a href="#rebuild">Full case study above</a>.</li>
-          <li>Used the resulting telemetry to run root cause analysis, identify repeated failures sharing an architectural cause, and change the infrastructure to eliminate them.</li>
-          <li>Declined a vendor quote of roughly 600 hours for the CI/CD build and delivered it in about a week using Claude Code.</li>
-          <li>Took on roughly half the engineering work previously held by an outside vendor, coordinated two vendor engineering teams, and trained three new hires.</li>
+          <li>Rebuilt the engineering foundation in sequence: source control, AWS account custody, dependency and configuration audit, CI/CD across three environments, SOC&nbsp;2 certification, observability, then engineering practice. <a href="#rebuild">Full case study above</a>.</li>
+          <li>Traced recurring production failures to a gap between job execution and verified completion, rebuilt observability around completion, and remediated swallowed exceptions, silent worker failures, race conditions, and database deadlocks.</li>
+          <li>Declined a vendor quote of roughly 600 hours for the CI/CD build and delivered it in about a week; it has since carried 80+ deployments in three months.</li>
+          <li>Lead ten vendor engineers across two teams plus one direct report, after absorbing roughly half the engineering work previously held by an outside vendor.</li>
+          <li>Established hiring requirements and interview rubrics, a wiki bootcamp and onboarding guide, code review standards, and release gates.</li>
         </ul>
       </article>
 
@@ -183,8 +195,9 @@
         </div>
         <p class="role__company">Apple Online Store (Contract) · Sunnyvale, CA</p>
         <ul>
-          <li>Brought vendor-owned critical paths into internal understanding using AI-assisted code analysis, on a system my team was accountable for but had not authored.</li>
-          <li>Ran the engineering operating rhythm for roughly 20 engineers on Apple's online commerce stack, turning ambiguous executive goals into explicit tradeoffs across speed, reliability, and cost.</li>
+          <li>Managed roughly 20 vendor engineers delivering Apple Online Store ordering and services, running the engineering operating rhythm across squads on a revenue-carrying path.</li>
+          <li>Brought vendor-owned critical paths into internal understanding using AI-assisted code analysis, on code my team was accountable for but had not authored.</li>
+          <li>Turned ambiguous executive goals into explicit tradeoffs across speed, reliability, and cost. Worked in JavaScript and Amazon Athena.</li>
         </ul>
       </article>
 
