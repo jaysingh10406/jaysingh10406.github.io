@@ -269,6 +269,20 @@ code {
 .depth dt:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
 .depth dd { margin: 4px 0 0; font-size: 14.5px; color: var(--ink-soft); }
 
+/* Pointer target sizing (WCAG 2.5.8): hit area only.
+   No change to type size, colour, weight, or position. */
+.nav__links a,
+.cta__link,
+.work__links a,
+.footer a {
+  display: inline-block;
+  padding-block: 3px;
+}
+.earlier summary,
+.deepdive summary {
+  padding-block: 3px;
+}
+
 /* Footer */
 .footer {
   border-top: 1px solid var(--rule);
