@@ -407,6 +407,39 @@
         </article>
 
         <article class="work">
+          <h3>Syntax Gym</h3>
+          <p class="work__sub">Vanilla JS · Single-file HTML · localStorage · Cloudflare Workers</p>
+          <p>
+            Recall drills for a stack you are ramping up on, rather than a language you are
+            learning. You are told what to produce, you type it from memory, and it names what
+            is missing without showing you the answer. 81 drills across Django, Python, and
+            JavaScript, every reference answer taken from that project's official documentation
+            rather than from tutorials, because a stale reference answer is worse than no drill.
+          </p>
+          <p>
+            The decision worth defending is that the language model is the enhancement, never the
+            grader. Free-form answers can be reviewed by a model that reads what you wrote against
+            the reference and explains why it is off, but that path exists only where a host
+            runtime provides it. Everywhere else, including the link below,
+            <code>claude.use()</code> resolves to null and grading falls back to deterministic
+            required-token checks. The checklist is computed first and kept either way, so a
+            reviewer that is unavailable or declined costs you the prose and nothing else. A drill
+            app whose grader can go offline is not a drill app.
+          </p>
+          <p>
+            The other decision is one file and no build step, which is what lets it be opened by
+            double-clicking and served as a single Worker response. That one has a visible expiry:
+            all 81 drills are inlined in <code>window.TRACKS</code>, so every visitor parses the
+            whole corpus to run one track. Splitting the drill data out and fetching per track is
+            the obvious next move, and it buys nothing until the corpus is large enough to feel.
+          </p>
+          <p class="work__links">
+            <a href="https://syntax-gym.jaysingh10406.workers.dev/" target="_blank" rel="noopener">Live demo</a>
+            <a href="https://github.com/jaysingh10406/syntax-gym" target="_blank" rel="noopener">Source</a>
+          </p>
+        </article>
+
+        <article class="work">
           <h3>security-cicd-templates</h3>
           <p class="work__sub">GitHub Actions · AWS OIDC · Trivy · Bandit</p>
           <p>
